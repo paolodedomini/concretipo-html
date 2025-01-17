@@ -1,0 +1,489 @@
+@import "./normalize";
+@import "./variables";
+@font-face {
+  font-family: "Sen";
+  src: url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+}
+body {
+  font-family: "Sen", sans-serif;
+  margin: 0;
+}
+input {
+  height: 60px;
+  background-color: white;
+  border: 0;
+  margin: 2rem 0;
+}
+textarea {
+  background-color: white;
+  border: 0;
+}
+nav {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 50px 50px 0px 50px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  z-index: 200;
+  .logo {
+  }
+  .navigation {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 1rem;
+    font-size: 30px;
+    font-weight: bold;
+    &.home {
+      color: white;
+    }
+  }
+}
+main {
+  width: 100%;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+footer {
+  background-color: $darkGrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  color: white;
+  ul {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 22px;
+    font-weight: 200;
+    li {
+      margin: 1rem 0;
+    }
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.innerContainer {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+}
+.fullwidthInnerContainer {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.home {
+  h1 {
+    font-size: 70px;
+    font-weight: lighter;
+    margin-top: 0;
+    line-height: 1;
+    strong {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+  h2 {
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+  }
+  section > h2 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: $blue;
+    span {
+      color: $red;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 36px;
+  }
+}
+.homeFirst {
+  display: grid;
+  grid-template-columns: minmax(auto, 690px) 1fr;
+  padding: 2rem;
+  h1 {
+    margin-bottom: 100px;
+  }
+  img {
+    float: right;
+    margin-top: 1rem;
+  }
+  &__left {
+    .homeTextBlock {
+      margin-bottom: 100px;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.homeSecond {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: minmax(auto, 690px) 1fr;
+  padding: 2rem;
+  height: 85vh;
+  .goto {
+    padding: 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-left: auto;
+    background-color: $grey;
+  }
+  &__back {
+    position: absolute;
+    top: -90px;
+    left: 60px;
+    z-index: -100;
+  }
+  h2 {
+    font-size: 55px;
+    color: $blue;
+  }
+  &__left {
+    .projectImages {
+      position: relative;
+      li {
+        max-width: 640px;
+        height: 640px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    .projectList {
+      list-style: none;
+      padding-left: 1rem;
+      li {
+        margin-bottom: 2rem;
+        cursor: pointer;
+      }
+      &__title {
+        font-size: 40px;
+        font-weight: 300;
+      }
+      &__desc {
+        font-size: 26;
+      }
+    }
+  }
+}
+.homeThird {
+  position: relative;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: minmax(auto, 690px) 1fr;
+  gap: 4rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  &__back {
+    position: absolute;
+    top: -90px;
+    right: 0;
+  }
+  &__left {
+    text-align: center;
+    img {
+      width: 100%;
+      &.img_tech {
+        width: 80%;
+      }
+    }
+    .tech {
+      max-width: 650px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      justify-content: center;
+      justify-items: center;
+      align-items: end;
+
+      img:nth-child(1) {
+        width: 170px;
+        height: auto;
+      }
+      img:nth-child(2) {
+        width: 170px;
+        height: auto;
+      }
+      img:nth-child(3) {
+        width: 120px;
+        height: auto;
+      }
+      img:nth-child(4) {
+        width: 108px;
+        height: auto;
+      }
+      img:nth-child(5) {
+        width: 120px;
+        height: auto;
+      }
+      img:nth-child(6) {
+        width: 155px;
+        height: auto;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    gap: 4rem;
+  }
+}
+.homeFourth {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(auto, 458px) minmax(auto, 458px);
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  &__back {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: -1;
+    max-width: 450px;
+  }
+  &__box {
+    max-width: 458px;
+    width: 100%;
+    h3 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      text-align: right;
+    }
+    .data {
+      font-size: 28px;
+      font-weight: 200;
+      text-align: right;
+    }
+    .freccia {
+      display: block;
+      margin: 1rem 0 0 auto;
+    }
+  }
+}
+.sectionHomeFifth {
+  background-color: $blue;
+  margin-top: 4rem;
+
+  img {
+    position: relative;
+    z-index: 0;
+  }
+  .homeFifth {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 690px) 1fr;
+    justify-content: center;
+    &__left {
+      padding: 4rem 0;
+      p {
+        font-size: 30px;
+        color: white;
+        max-width: 800px;
+        margin-bottom: 2rem;
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+    &__right {
+      position: relative;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 450px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.contatti {
+  width: 100%;
+  background-color: $grey;
+}
+.innerContatti {
+  display: grid;
+  grid-template-columns: minmax(auto, 690px) 1fr;
+  background-color: $grey;
+  gap: 2rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    button {
+      height: 60px;
+      background-color: $blue;
+      border: none;
+      color: white;
+      font-size: 20px;
+      margin-top: 2rem;
+    }
+  }
+  .innerContatti__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    img {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      width: 100%;
+    }
+    &__box {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      .freccia {
+        display: block;
+        width: auto;
+        transform: rotate(180deg);
+        left: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  margin-top: -174px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  nav {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      animation: bounce 2s infinite;
+      object-fit: cover;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        animation: none;
+        transition: all 0.5s ease-in-out;
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+  .hero__mainimg {
+    object-fit: cover;
+  }
+  &__imgwrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    img {
+      width: 100vw;
+    }
+  }
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 20;
+    img {
+      position: absolute;
+    }
+    &__logo {
+      right: -100px;
+      bottom: -240px;
+
+      transform: rotate(-30deg);
+    }
+    &__graph1 {
+      left: 10%;
+      bottom: 0;
+    }
+    &__graph2 {
+      left: 0%;
+      bottom: 0;
+    }
+    &__graph3 {
+      left: 10%;
+      top: -20%;
+      opacity: 0.6;
+    }
+  }
+}
+.heroFooterImage {
+  position: relative;
+  left: 100px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
